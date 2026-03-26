@@ -20,8 +20,6 @@
     --gray-400: #888780;
     --gray-700: #444441;
     --gray-900: #1A1A18;
-    --blue-50: #E6F1FB;
-    --blue-600: #185FA5;
   }
 
   body {
@@ -38,7 +36,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .survey-header::before {
     content: '';
     position: absolute;
@@ -55,20 +52,18 @@
     border-radius: 50%;
     border: 1px solid rgba(255,255,255,0.04);
   }
-
   .header-inner {
     max-width: 720px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
   }
-
   .brand-tag {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(157, 225, 203, 0.12);
-    border: 1px solid rgba(157, 225, 203, 0.25);
+    background: rgba(157,225,203,0.12);
+    border: 1px solid rgba(157,225,203,0.25);
     border-radius: 20px;
     padding: 5px 14px;
     font-size: 11px;
@@ -78,14 +73,12 @@
     text-transform: uppercase;
     margin-bottom: 24px;
   }
-
   .brand-tag::before {
     content: '';
     width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--teal-100);
   }
-
   h1 {
     font-family: 'DM Serif Display', serif;
     font-size: 38px;
@@ -94,40 +87,25 @@
     line-height: 1.2;
     margin-bottom: 16px;
   }
-
   .header-sub {
     font-size: 14px;
     color: rgba(255,255,255,0.5);
     line-height: 1.7;
     font-weight: 300;
   }
-
   .header-meta {
     display: flex;
     gap: 24px;
     margin-top: 32px;
     padding-top: 24px;
     border-top: 1px solid rgba(255,255,255,0.08);
+    flex-wrap: wrap;
   }
-
-  .meta-item {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .meta-label {
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
-  }
-
-  .meta-value {
-    font-size: 13px;
-    color: rgba(255,255,255,0.75);
-    font-weight: 400;
-  }
+  .meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .meta-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+  .meta-value { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 400; }
+  .progress-bar-wrap { background: rgba(255,255,255,0.1); height: 3px; border-radius: 2px; margin-top: 28px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; width: 0%; background: var(--teal-100); border-radius: 2px; transition: width 0.4s ease; }
 
   .survey-body {
     max-width: 720px;
@@ -135,41 +113,19 @@
     padding: 40px 20px 80px;
   }
 
-  .section {
-    margin-bottom: 48px;
-  }
-
-  .section-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 24px;
-  }
-
+  .section { margin-bottom: 48px; }
+  .section-label { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
   .section-num {
     width: 28px; height: 28px;
     border-radius: 50%;
     background: var(--teal-500);
     color: #fff;
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 12px; font-weight: 700;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
-
-  .section-title {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--teal-700);
-  }
-
-  .section-divider {
-    height: 1px;
-    background: var(--gray-200);
-    margin-bottom: 28px;
-  }
+  .section-title { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal-700); }
+  .section-divider { height: 1px; background: var(--gray-200); margin-bottom: 28px; }
 
   .question-card {
     background: #fff;
@@ -178,43 +134,13 @@
     padding: 24px 28px;
     margin-bottom: 16px;
   }
+  .q-number { font-size: 11px; font-weight: 700; color: var(--teal-500); letter-spacing: 0.08em; margin-bottom: 8px; text-transform: uppercase; }
+  .q-text { font-size: 15px; font-weight: 500; color: var(--gray-900); line-height: 1.5; margin-bottom: 6px; }
+  .q-desc { font-size: 12px; color: var(--gray-400); line-height: 1.6; margin-bottom: 18px; font-weight: 300; }
 
-  .q-number {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--teal-500);
-    letter-spacing: 0.08em;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-  }
-
-  .q-text {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--gray-900);
-    line-height: 1.5;
-    margin-bottom: 6px;
-  }
-
-  .q-desc {
-    font-size: 12px;
-    color: var(--gray-400);
-    line-height: 1.6;
-    margin-bottom: 18px;
-    font-weight: 300;
-  }
-
-  /* Radio & Checkbox */
-  .options-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
+  .options-list { display: flex; flex-direction: column; gap: 8px; }
   .option-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; align-items: center; gap: 10px;
     padding: 10px 14px;
     border: 1px solid var(--gray-100);
     border-radius: 8px;
@@ -224,61 +150,43 @@
     color: var(--gray-700);
     user-select: none;
   }
+  .option-item:hover { border-color: var(--teal-100); background: var(--teal-50); color: var(--teal-700); }
+  .option-item input { accent-color: var(--teal-500); width: 15px; height: 15px; flex-shrink: 0; }
 
-  .option-item:hover {
-    border-color: var(--teal-100);
-    background: var(--teal-50);
-    color: var(--teal-700);
+  .other-input-wrap { display: none; margin-top: 8px; }
+  .other-input-wrap.visible { display: block; }
+  .other-input-wrap input[type=text] {
+    width: 100%;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    color: var(--gray-900);
+    outline: none;
+    transition: border-color 0.15s;
+    background: #fff;
   }
+  .other-input-wrap input[type=text]:focus { border-color: var(--teal-500); }
+  .other-input-wrap input[type=text]::placeholder { color: var(--gray-200); }
 
-  .option-item input {
-    accent-color: var(--teal-500);
-    width: 15px; height: 15px;
-    flex-shrink: 0;
-  }
-
-  /* Scale / Rating */
-  .scale-row {
-    display: flex;
-    gap: 6px;
-    margin-top: 4px;
-  }
-
+  .scale-row { display: flex; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
   .scale-btn {
-    flex: 1;
+    flex: 1; min-width: 32px;
     height: 44px;
     border: 1px solid var(--gray-200);
     border-radius: 6px;
     background: #fff;
     cursor: pointer;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 13px; font-weight: 500;
     color: var(--gray-400);
     transition: all 0.15s;
     font-family: 'Noto Sans KR', sans-serif;
   }
+  .scale-btn:hover { border-color: var(--teal-500); color: var(--teal-700); background: var(--teal-50); }
+  .scale-btn.selected { background: var(--teal-500); border-color: var(--teal-500); color: #fff; }
+  .scale-labels { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; color: var(--gray-400); }
 
-  .scale-btn:hover {
-    border-color: var(--teal-500);
-    color: var(--teal-700);
-    background: var(--teal-50);
-  }
-
-  .scale-btn.selected {
-    background: var(--teal-500);
-    border-color: var(--teal-500);
-    color: #fff;
-  }
-
-  .scale-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 6px;
-    font-size: 11px;
-    color: var(--gray-400);
-  }
-
-  /* Textarea */
   textarea {
     width: 100%;
     border: 1px solid var(--gray-200);
@@ -294,124 +202,97 @@
     transition: border-color 0.15s;
     background: #fff;
   }
+  textarea:focus { border-color: var(--teal-500); }
+  textarea::placeholder { color: var(--gray-200); }
 
-  textarea:focus {
-    border-color: var(--teal-500);
+  .team-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+    margin-top: 4px;
   }
-
-  textarea::placeholder {
-    color: var(--gray-200);
+  .team-btn {
+    padding: 14px 10px;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px; font-weight: 500;
+    color: var(--gray-700);
+    text-align: center;
+    transition: all 0.15s;
+    line-height: 1.4;
   }
+  .team-btn .team-sub { display: block; font-size: 10px; font-weight: 300; color: var(--gray-400); margin-top: 3px; }
+  .team-btn:hover { border-color: var(--teal-100); background: var(--teal-50); color: var(--teal-700); }
+  .team-btn.selected { background: var(--teal-500); border-color: var(--teal-500); color: #fff; }
+  .team-btn.selected .team-sub { color: rgba(255,255,255,0.7); }
 
-  /* Scenario card */
+  .scenario-section { display: none; margin-top: 0; }
+  .scenario-section.visible { display: block; }
+
   .scenario-card {
     background: #fff;
     border-radius: 12px;
     border: 1px solid var(--gray-100);
-    padding: 0;
     margin-bottom: 16px;
     overflow: hidden;
   }
-
   .scenario-header {
     background: var(--gray-50);
     border-bottom: 1px solid var(--gray-100);
     padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex; align-items: center; gap: 12px;
   }
-
   .scenario-badge {
     background: var(--teal-50);
     border: 1px solid var(--teal-100);
     border-radius: 20px;
     padding: 3px 12px;
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 11px; font-weight: 700;
     color: var(--teal-700);
-    letter-spacing: 0.04em;
     white-space: nowrap;
   }
+  .scenario-title { font-size: 14px; font-weight: 500; color: var(--gray-700); }
+  .scenario-body { padding: 20px 24px 24px; }
+  .scenario-q { font-size: 14px; font-weight: 500; color: var(--gray-900); margin-bottom: 6px; line-height: 1.5; }
+  .scenario-desc { font-size: 12px; color: var(--gray-400); margin-bottom: 14px; line-height: 1.6; font-weight: 300; }
 
-  .scenario-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--gray-700);
-  }
-
-  .scenario-body {
-    padding: 20px 24px 24px;
-  }
-
-  .scenario-q {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--gray-900);
-    margin-bottom: 6px;
-    line-height: 1.5;
-  }
-
-  .scenario-desc {
-    font-size: 12px;
-    color: var(--gray-400);
-    margin-bottom: 14px;
-    line-height: 1.6;
-    font-weight: 300;
-  }
-
-  .freq-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-  }
-
+  .freq-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
   .freq-btn {
     padding: 8px 4px;
     border: 1px solid var(--gray-200);
     border-radius: 6px;
     background: #fff;
     cursor: pointer;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 12px; font-weight: 500;
     color: var(--gray-400);
     text-align: center;
     transition: all 0.15s;
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.4;
   }
+  .freq-btn:hover { border-color: var(--teal-500); color: var(--teal-700); background: var(--teal-50); }
+  .freq-btn.selected { background: var(--teal-500); border-color: var(--teal-500); color: #fff; }
 
-  .freq-btn:hover {
-    border-color: var(--teal-500);
-    color: var(--teal-700);
+  .sub-q { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-100); }
+  .sub-q-label { font-size: 12px; font-weight: 500; color: var(--gray-700); margin-bottom: 10px; }
+
+  .team-hint {
     background: var(--teal-50);
-  }
-
-  .freq-btn.selected {
-    background: var(--teal-500);
-    border-color: var(--teal-500);
-    color: #fff;
-  }
-
-  .sub-q {
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid var(--gray-100);
-  }
-
-  .sub-q-label {
+    border: 1px solid var(--teal-100);
+    border-radius: 8px;
+    padding: 12px 16px;
     font-size: 12px;
-    font-weight: 500;
-    color: var(--gray-700);
-    margin-bottom: 10px;
+    color: var(--teal-700);
+    margin-bottom: 16px;
+    display: none;
+    line-height: 1.6;
   }
+  .team-hint.visible { display: block; }
 
-  /* Submit */
-  .submit-section {
-    margin-top: 40px;
-    text-align: center;
-  }
-
+  .submit-section { margin-top: 40px; text-align: center; }
   .submit-btn {
     background: var(--teal-700);
     color: #fff;
@@ -419,49 +300,22 @@
     border-radius: 8px;
     padding: 16px 56px;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 14px; font-weight: 700;
     cursor: pointer;
     letter-spacing: 0.04em;
     transition: all 0.2s;
   }
-
-  .submit-btn:hover {
-    background: var(--teal-900);
-    transform: translateY(-1px);
-  }
-
-  .submit-note {
-    font-size: 11px;
-    color: var(--gray-400);
-    margin-top: 12px;
-    font-weight: 300;
-  }
-
-  .progress-bar-wrap {
-    background: rgba(255,255,255,0.1);
-    height: 3px;
-    border-radius: 2px;
-    margin-top: 28px;
-    overflow: hidden;
-  }
-
-  .progress-bar-fill {
-    height: 100%;
-    width: 0%;
-    background: var(--teal-100);
-    border-radius: 2px;
-    transition: width 0.4s ease;
-  }
+  .submit-btn:hover:not(:disabled) { background: var(--teal-900); transform: translateY(-1px); }
+  .submit-btn:disabled { opacity: 0.7; cursor: default; }
+  .submit-note { font-size: 11px; color: var(--gray-400); margin-top: 12px; font-weight: 300; }
 
   @media (max-width: 600px) {
     .survey-header { padding: 40px 20px 36px; }
     h1 { font-size: 28px; }
-    .header-meta { flex-wrap: wrap; gap: 16px; }
     .freq-grid { grid-template-columns: repeat(2, 1fr); }
-    .question-card, .scenario-body { padding: 18px; }
-    .scale-row { gap: 4px; }
-    .scale-btn { font-size: 12px; }
+    .question-card { padding: 18px; }
+    .scenario-body { padding: 16px 18px 20px; }
+    .team-selector { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -481,10 +335,6 @@
         <span class="meta-value">약 8–12분</span>
       </div>
       <div class="meta-item">
-        <span class="meta-label">총 문항</span>
-        <span class="meta-value">15문항</span>
-      </div>
-      <div class="meta-item">
         <span class="meta-label">응답 형태</span>
         <span class="meta-value">익명 처리</span>
       </div>
@@ -497,7 +347,7 @@
 
 <div class="survey-body">
 
-  <!-- SECTION 1: 기본 사용 후기 -->
+  <!-- ─── SECTION 1 ─── -->
   <div class="section">
     <div class="section-label">
       <div class="section-num">1</div>
@@ -505,16 +355,24 @@
     </div>
     <div class="section-divider"></div>
 
+
+    <!-- 부서명 -->
+    <div class="question-card">
+      <div class="q-number">기본 정보</div>
+      <div class="q-text">소속 부서명을 입력해 주세요.</div>
+      <div class="q-desc">팀 이름, 부서명 등 편하신 방식으로 작성해 주세요. 개인 식별에는 사용되지 않습니다.</div>
+      <input type="text" name="department" placeholder="예) RA팀, Clinical Operations, CMC 개발팀 등" style="width:100%; border:1px solid var(--gray-200); border-radius:8px; padding:12px 14px; font-family:'Noto Sans KR',sans-serif; font-size:13px; color:var(--gray-900); outline:none; background:#fff;" onfocus="this.style.borderColor='var(--teal-500)'" onblur="this.style.borderColor='var(--gray-200)'">
+    </div>
     <!-- Q1 -->
     <div class="question-card">
       <div class="q-number">Q1</div>
       <div class="q-text">케이론을 업무에 얼마나 자주 활용하고 계신가요?</div>
       <div class="q-desc">가장 가까운 사용 빈도를 선택해 주세요.</div>
-      <div class="options-list" id="q1">
+      <div class="options-list">
         <label class="option-item"><input type="radio" name="q1" value="daily"> 매일 (거의 모든 업무에 사용)</label>
         <label class="option-item"><input type="radio" name="q1" value="week_several"> 주 3회 이상</label>
         <label class="option-item"><input type="radio" name="q1" value="week_once"> 주 1–2회</label>
-        <label class="option-item"><input type="radio" name="q1" value="month"> 월 수 회</label>
+        <label class="option-item"><input type="radio" name="q1" value="month_12"> 월 1–2회</label>
         <label class="option-item"><input type="radio" name="q1" value="rarely"> 거의 사용하지 않음</label>
       </div>
     </div>
@@ -523,7 +381,7 @@
     <div class="question-card">
       <div class="q-number">Q2</div>
       <div class="q-text">케이론 도입 이후 전반적인 업무 만족도를 평가해 주세요.</div>
-      <div class="q-desc">1 = 매우 불만족 / 5 = 매우 만족</div>
+      <div class="q-desc">1 = 매우 불만족 &nbsp;/&nbsp; 5 = 매우 만족</div>
       <div class="scale-row" data-q="q2">
         <button class="scale-btn" onclick="selectScale(this,'q2',1)">1</button>
         <button class="scale-btn" onclick="selectScale(this,'q2',2)">2</button>
@@ -541,19 +399,22 @@
       <div class="q-desc">해당하는 항목을 모두 선택해 주세요.</div>
       <div class="options-list">
         <label class="option-item"><input type="checkbox" name="q3" value="summary"> 문서 요약 및 핵심 내용 추출</label>
-        <label class="option-item"><input type="checkbox" name="q3" value="translation"> 다국어 번역 및 현지화 검토</label>
-        <label class="option-item"><input type="checkbox" name="q3" value="compare"> 버전 간 변경 사항 비교</label>
         <label class="option-item"><input type="checkbox" name="q3" value="compliance"> 규정 및 가이드라인 준수 여부 검토</label>
         <label class="option-item"><input type="checkbox" name="q3" value="draft"> 초안 작성 및 템플릿 생성</label>
-        <label class="option-item"><input type="checkbox" name="q3" value="qa"> 품질 검토 및 오류 탐지</label>
-        <label class="option-item"><input type="checkbox" name="q3" value="other_feat"> 기타</label>
+        <label class="option-item"><input type="checkbox" name="q3" value="qa_check"> 품질 검토 및 오류 탐지</label>
+        <label class="option-item">
+          <input type="checkbox" name="q3" value="other" onchange="toggleOther(this,'q3_other_wrap')"> 기타
+        </label>
+      </div>
+      <div class="other-input-wrap" id="q3_other_wrap">
+        <input type="text" name="q3_other" placeholder="어떤 기능이 도움이 되셨나요?">
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="question-card">
       <div class="q-number">Q4</div>
-      <div class="q-text">케이론 도입 후 문서 처리 속도가 어느 정도 개선되었다고 느끼시나요?</div>
+      <div class="q-text">케이론 도입 후 업무 처리 속도 또는 검색 속도가 어느 정도 개선되었다고 느끼시나요?</div>
       <div class="options-list">
         <label class="option-item"><input type="radio" name="q4" value="over50"> 50% 이상 단축</label>
         <label class="option-item"><input type="radio" name="q4" value="30to50"> 30–50% 단축</label>
@@ -567,7 +428,7 @@
     <div class="question-card">
       <div class="q-number">Q5</div>
       <div class="q-text">케이론을 동료나 타 팀에 추천할 의향이 있으신가요?</div>
-      <div class="q-desc">0 = 전혀 추천하지 않겠다 / 10 = 반드시 추천하겠다 (NPS)</div>
+      <div class="q-desc">0 = 전혀 추천하지 않겠다 &nbsp;/&nbsp; 10 = 반드시 추천하겠다 (NPS)</div>
       <div class="scale-row" data-q="q5">
         <button class="scale-btn" onclick="selectScale(this,'q5',0)">0</button>
         <button class="scale-btn" onclick="selectScale(this,'q5',1)">1</button>
@@ -582,10 +443,14 @@
         <button class="scale-btn" onclick="selectScale(this,'q5',10)">10</button>
       </div>
       <div class="scale-labels"><span>전혀 추천 안 함</span><span>적극 추천</span></div>
+      <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--gray-100);">
+        <div style="font-size:12px; font-weight:500; color:var(--gray-700); margin-bottom:8px;">그렇게 선택하신 이유를 간략히 알려주세요. (선택)</div>
+        <textarea name="q5_reason" style="min-height:72px;" placeholder="예) 요약 기능이 뛰어나지만 사내 보안 이슈로 적극 추천하기 어렵습니다."></textarea>
+      </div>
     </div>
   </div>
 
-  <!-- SECTION 2: Cross-function 리뷰 시나리오 -->
+  <!-- ─── SECTION 2 ─── -->
   <div class="section">
     <div class="section-label">
       <div class="section-num">2</div>
@@ -593,173 +458,222 @@
     </div>
     <div class="section-divider"></div>
 
-    <!-- 시나리오 A: 임상팀 ↔ 규제업무팀 -->
-    <div class="scenario-card">
-      <div class="scenario-header">
-        <div class="scenario-badge">시나리오 A</div>
-        <div class="scenario-title">임상팀 ↔ 규제업무팀 — IND / NDA 문서 리뷰</div>
+    <!-- Q6: 직군 -->
+    <div class="question-card">
+      <div class="q-number">Q6</div>
+      <div class="q-text">현재 소속 직군을 선택해 주세요.</div>
+      <div class="q-desc">이후 질문은 귀하의 팀 관점에서 답변해 주시면 됩니다.</div>
+      <div class="team-selector">
+        <button class="team-btn" onclick="selectMyTeam(this,'Research')">Research<span class="team-sub">연구개발</span></button>
+        <button class="team-btn" onclick="selectMyTeam(this,'RA')">RA<span class="team-sub">규제업무</span></button>
+        <button class="team-btn" onclick="selectMyTeam(this,'Clinical')">Clinical<span class="team-sub">임상</span></button>
+        <button class="team-btn" onclick="selectMyTeam(this,'Commercial')">Commercial<span class="team-sub">영업·마케팅</span></button>
+        <button class="team-btn" onclick="selectMyTeam(this,'Quality/CMC')">Quality / CMC<span class="team-sub">품질·생산</span></button>
+        <button class="team-btn" onclick="selectMyTeam(this,'BD/IP')">BD / IP<span class="team-sub">사업개발·지재권</span></button>
+        <button class="team-btn" onclick="selectMyTeam(this,'PV')">PV<span class="team-sub">약물감시</span></button>
+        <button class="team-btn" id="q6_custom_btn" onclick="selectMyTeamCustom(this)">직접 입력<span class="team-sub">기타 직군</span></button>
       </div>
-      <div class="scenario-body">
-        <div class="scenario-q">이 상황에서 케이론을 얼마나 자주 활용하시나요?</div>
-        <div class="scenario-desc">
-          임상 시험 계획서(Protocol), IB, IND·NDA 패키지 등 규제 제출용 문서를 임상팀과 규제업무팀이 함께 검토하는 상황입니다.
+      <div class="other-input-wrap" id="q6_custom_wrap" style="margin-top:10px;">
+        <input type="text" id="q6_custom_input" name="team_custom" placeholder="직군명을 입력해 주세요." oninput="updateCustomTeam(this.value)">
+      </div>
+    </div>
+
+    <!-- Q7: 협업 대상 팀 -->
+    <div class="question-card">
+      <div class="q-number">Q7</div>
+      <div class="q-text">문서 리뷰와 관련하여 주로 협업하는 부서는 어디인가요?</div>
+      <div class="q-desc">복수 선택 가능합니다.</div>
+      <div class="team-selector">
+        <button class="team-btn team-multi" onclick="toggleCollabTeam(this,'Research')">Research<span class="team-sub">연구개발</span></button>
+        <button class="team-btn team-multi" onclick="toggleCollabTeam(this,'RA')">RA<span class="team-sub">규제업무</span></button>
+        <button class="team-btn team-multi" onclick="toggleCollabTeam(this,'Clinical')">Clinical<span class="team-sub">임상</span></button>
+        <button class="team-btn team-multi" onclick="toggleCollabTeam(this,'Commercial')">Commercial<span class="team-sub">영업·마케팅</span></button>
+        <button class="team-btn team-multi" onclick="toggleCollabTeam(this,'Quality/CMC')">Quality / CMC<span class="team-sub">품질·생산</span></button>
+        <button class="team-btn team-multi" onclick="toggleCollabTeam(this,'BD/IP')">BD / IP<span class="team-sub">사업개발·지재권</span></button>
+        <button class="team-btn team-multi" onclick="toggleCollabTeam(this,'PV')">PV<span class="team-sub">약물감시</span></button>
+        <button class="team-btn team-multi" id="q7_custom_btn" onclick="toggleCollabCustom(this)">직접 입력<span class="team-sub">기타 부서</span></button>
+      </div>
+      <div class="other-input-wrap" id="q7_custom_wrap" style="margin-top:10px;">
+        <input type="text" id="q7_custom_input" name="collab_custom" placeholder="협업 부서명을 입력해 주세요." oninput="updateCollabCustom(this.value)">
+      </div>
+    </div>
+
+    <!-- Q8: 협업 목적 -->
+    <div class="question-card">
+      <div class="q-number">Q8</div>
+      <div class="q-text">그 부서들과 어떤 목적으로 문서를 주고받거나 리뷰를 진행하나요?</div>
+      <div class="q-desc">해당하는 항목을 모두 선택해 주세요.</div>
+      <div class="options-list">
+        <label class="option-item"><input type="checkbox" name="q8" value="regulatory_submit"> 규제 제출 문서 작성·검토 (IND, NDA, PSUR 등)</label>
+        <label class="option-item"><input type="checkbox" name="q8" value="clinical_protocol"> 임상시험 계획서(Protocol) / IB 검토</label>
+        <label class="option-item"><input type="checkbox" name="q8" value="safety_report"> 안전성 데이터 및 이상반응 보고서 검토</label>
+        <label class="option-item"><input type="checkbox" name="q8" value="promo_material"> 프로모션·의학 자료 의학적 정확성 검토</label>
+        <label class="option-item"><input type="checkbox" name="q8" value="sop_batch"> SOP, 배치기록서(Batch Record) 등 품질 문서 검토</label>
+        <label class="option-item"><input type="checkbox" name="q8" value="contract_legal"> 계약서·허가 문서 법적·규제 검토 (CDA, 위탁계약 등)</label>
+        <label class="option-item"><input type="checkbox" name="q8" value="data_align"> 부서 간 데이터 정합성 확인 및 교차 검토</label>
+        <label class="option-item"><input type="checkbox" name="q8" value="approval_sign"> 결재·승인을 위한 문서 전달 및 회람</label>
+        <label class="option-item"><input type="checkbox" name="q8" value="q8other" onchange="toggleOther(this,'q8_other_wrap')"> 기타</label>
+      </div>
+      <div class="other-input-wrap" id="q8_other_wrap">
+        <input type="text" name="q8_other" placeholder="어떤 목적으로 리뷰하시나요?">
+      </div>
+    </div>
+
+    <!-- Q9: 업무 연계성 -->
+    <div class="question-card">
+      <div class="q-number">Q9 — 업무 연계성</div>
+      <div class="q-text">타 부서의 결과물이나 검토 의견이 있어야만 진행할 수 있는 업무는 무엇인가요?</div>
+      <div class="q-desc">귀하의 업무 중 다른 팀의 산출물에 의존하는 것을 구체적으로 알려주세요.</div>
+      <textarea name="q9_dependency" placeholder="예) RA팀의 가이드라인 검토 결과가 나와야 임상 프로토콜 최종 확정이 가능합니다.
+예) QA의 배치 기록 승인 후에야 다음 제조 단계로 진행할 수 있습니다."></textarea>
+    </div>
+
+    <!-- Q10: 병목 지점 -->
+    <div class="question-card">
+      <div class="q-number">Q10 — 병목 지점</div>
+      <div class="q-text">타 부서의 피드백이나 승인을 기다리는 데 평균적으로 얼마나 소요되나요?</div>
+      <div class="q-desc">가장 빈번하게 발생하는 대기 상황 기준으로 선택해 주세요.</div>
+      <div class="options-list">
+        <label class="option-item"><input type="radio" name="q10_wait" value="under1d"> 하루 이내</label>
+        <label class="option-item"><input type="radio" name="q10_wait" value="1to3d"> 1–3일</label>
+        <label class="option-item"><input type="radio" name="q10_wait" value="4to7d"> 4–7일</label>
+        <label class="option-item"><input type="radio" name="q10_wait" value="over1w"> 1주 이상</label>
+        <label class="option-item"><input type="radio" name="q10_wait" value="unpredictable"> 일정하지 않아 예측 불가</label>
+      </div>
+      <div style="margin-top:14px;">
+        <div style="font-size:12px; font-weight:500; color:var(--gray-700); margin-bottom:8px;">대기가 길어지는 주된 이유는 무엇인가요? (선택)</div>
+        <div class="options-list">
+          <label class="option-item"><input type="checkbox" name="q10_reason" value="absence"> 담당자 부재 또는 업무 과중</label>
+          <label class="option-item"><input type="checkbox" name="q10_reason" value="unclear_req"> 요청 내용이 불명확해 추가 확인 필요</label>
+          <label class="option-item"><input type="checkbox" name="q10_reason" value="multi_reviewer"> 복수 검토자의 의견 취합에 시간 소요</label>
+          <label class="option-item"><input type="checkbox" name="q10_reason" value="format"> 문서 포맷이나 버전이 맞지 않아 재작업</label>
+          <label class="option-item"><input type="checkbox" name="q10_reason" value="priority"> 타 부서의 우선순위에서 밀림</label>
+          <label class="option-item"><input type="checkbox" name="q10_reason" value="q10other" onchange="toggleOther(this,'q10_reason_other_wrap')"> 기타</label>
         </div>
-        <div class="freq-grid" data-q="sa_freq">
-          <button class="freq-btn" onclick="selectFreq(this,'sa_freq','always')">항상<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sa_freq','often')">자주<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sa_freq','sometimes')">가끔<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sa_freq','none')">사용<br>안 함</button>
-        </div>
-        <div class="sub-q">
-          <div class="sub-q-label">케이론이 이 리뷰 과정에서 어떤 역할을 하나요? (자유 기술)</div>
-          <textarea placeholder="예) 규정 요건과 문서 내용의 일치 여부를 빠르게 확인할 때 주로 활용합니다."></textarea>
+        <div class="other-input-wrap" id="q10_reason_other_wrap">
+          <input type="text" name="q10_reason_other" placeholder="어떤 이유가 있으신가요?">
         </div>
       </div>
     </div>
 
-    <!-- 시나리오 B: Medical Affairs ↔ Marketing -->
-    <div class="scenario-card">
-      <div class="scenario-header">
-        <div class="scenario-badge">시나리오 B</div>
-        <div class="scenario-title">의학부 ↔ 마케팅팀 — 프로모션·의학 자료 검토</div>
+    <!-- Q11: 커뮤니케이션 -->
+    <div class="question-card">
+      <div class="q-number">Q11 — 커뮤니케이션</div>
+      <div class="q-text">업무 결과물을 주고받을 때, 추가 설명이나 수정 요청이 반복되는 이유는 무엇인가요?</div>
+      <div class="q-desc">경험하신 상황을 모두 선택해 주세요.</div>
+      <div class="options-list">
+        <label class="option-item"><input type="checkbox" name="q11_comm" value="context_missing"> 배경 설명 없이 문서만 전달되어 맥락 파악이 어려움</label>
+        <label class="option-item"><input type="checkbox" name="q11_comm" value="term_diff"> 팀마다 용어나 기준이 달라 해석 차이 발생</label>
+        <label class="option-item"><input type="checkbox" name="q11_comm" value="scope_unclear"> 어느 부분을 어느 수준으로 검토해야 하는지 불명확</label>
+        <label class="option-item"><input type="checkbox" name="q11_comm" value="data_format"> 데이터 포맷이 달라 바로 활용하기 어려움</label>
+        <label class="option-item"><input type="checkbox" name="q11_comm" value="version_confusion"> 최신 버전 문서 공유가 제때 안 됨</label>
+        <label class="option-item"><input type="checkbox" name="q11_comm" value="no_template"> 정해진 양식이 없어 매번 형태가 다름</label>
+        <label class="option-item"><input type="checkbox" name="q11_comm" value="q11other" onchange="toggleOther(this,'q11_comm_other_wrap')"> 기타</label>
       </div>
-      <div class="scenario-body">
-        <div class="scenario-q">이 상황에서 케이론을 얼마나 자주 활용하시나요?</div>
-        <div class="scenario-desc">
-          디테일링 자료, Patient Leaflet, 학술 발표 슬라이드 등 의학적 정확성과 마케팅 메시지가 동시에 검토되어야 하는 상황입니다.
+      <div class="other-input-wrap" id="q11_comm_other_wrap">
+        <input type="text" name="q11_comm_other" placeholder="다른 이유가 있으신가요?">
+      </div>
+    </div>
+
+    <!-- Q12: 검토 프로세스 -->
+    <div class="question-card">
+      <div class="q-number">Q12 — 검토 프로세스</div>
+      <div class="q-text">타 부서 문서를 리뷰할 때 가장 시간이 많이 걸리는 작업은 무엇인가요?</div>
+      <div class="q-desc">해당하는 항목을 모두 선택해 주세요.</div>
+      <div class="options-list">
+        <label class="option-item"><input type="checkbox" name="q12_review" value="reading"> 전체 문서를 처음부터 끝까지 읽고 파악하기</label>
+        <label class="option-item"><input type="checkbox" name="q12_review" value="verify_fact"> 기재된 수치·사실 관계 검증</label>
+        <label class="option-item"><input type="checkbox" name="q12_review" value="cross_ref"> 여러 문서를 교차 비교하며 일관성 확인</label>
+        <label class="option-item"><input type="checkbox" name="q12_review" value="format_convert"> 포맷 변환 또는 데이터 재가공</label>
+        <label class="option-item"><input type="checkbox" name="q12_review" value="summarize"> 검토 결과 요약 및 의견 정리</label>
+        <label class="option-item"><input type="checkbox" name="q12_review" value="guideline_check"> 규정·가이드라인과의 일치 여부 확인</label>
+        <label class="option-item"><input type="checkbox" name="q12_review" value="q12other" onchange="toggleOther(this,'q12_review_other_wrap')"> 기타</label>
+      </div>
+      <div class="other-input-wrap" id="q12_review_other_wrap">
+        <input type="text" name="q12_review_other" placeholder="어떤 작업이 가장 오래 걸리나요?">
+      </div>
+    </div>
+
+    <!-- Q13: 데이터 정합성 -->
+    <div class="question-card">
+      <div class="q-number">Q13 — 데이터 정합성</div>
+      <div class="q-text">부서 간 데이터가 일치하지 않아 직접 대조하거나 재가공하는 경우가 있나요?</div>
+      <div class="options-list">
+        <label class="option-item"><input type="radio" name="q13_data" value="always"> 매우 자주 있다 (주 1회 이상)</label>
+        <label class="option-item"><input type="radio" name="q13_data" value="often"> 종종 있다 (월 수 회)</label>
+        <label class="option-item"><input type="radio" name="q13_data" value="sometimes"> 가끔 있다 (월 1–2회)</label>
+        <label class="option-item"><input type="radio" name="q13_data" value="rarely"> 거의 없다</label>
+        <label class="option-item"><input type="radio" name="q13_data" value="never"> 전혀 없다</label>
+      </div>
+      <div style="margin-top:14px;">
+        <div style="font-size:12px; font-weight:500; color:var(--gray-700); margin-bottom:8px;">주로 어떤 데이터에서 불일치가 발생하나요? (선택)</div>
+        <div class="options-list">
+          <label class="option-item"><input type="checkbox" name="q13_mismatch" value="patient_data"> 환자 데이터 / 임상 결과</label>
+          <label class="option-item"><input type="checkbox" name="q13_mismatch" value="reg_ref"> 규제 참조 문서 버전</label>
+          <label class="option-item"><input type="checkbox" name="q13_mismatch" value="spec"> 제품 사양 / 제조 데이터</label>
+          <label class="option-item"><input type="checkbox" name="q13_mismatch" value="safety"> 안전성 수치 / 이상반응 집계</label>
+          <label class="option-item"><input type="checkbox" name="q13_mismatch" value="market"> 시장·매출 데이터</label>
+          <label class="option-item"><input type="checkbox" name="q13_mismatch" value="q13other" onchange="toggleOther(this,'q13_mismatch_other_wrap')"> 기타</label>
         </div>
-        <div class="freq-grid" data-q="sb_freq">
-          <button class="freq-btn" onclick="selectFreq(this,'sb_freq','always')">항상<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sb_freq','often')">자주<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sb_freq','sometimes')">가끔<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sb_freq','none')">사용<br>안 함</button>
-        </div>
-        <div class="sub-q">
-          <div class="sub-q-label">이 리뷰에서 케이론 사용 시 가장 어려운 점이 있다면? (자유 기술)</div>
-          <textarea placeholder="예) 허가 사항 외 내용 포함 여부를 자동으로 플래그해 주면 좋겠습니다."></textarea>
+        <div class="other-input-wrap" id="q13_mismatch_other_wrap">
+          <input type="text" name="q13_mismatch_other" placeholder="어떤 데이터에서 주로 발생하나요?">
         </div>
       </div>
     </div>
 
-    <!-- 시나리오 C: R&D ↔ 품질보증팀 -->
-    <div class="scenario-card">
-      <div class="scenario-header">
-        <div class="scenario-badge">시나리오 C</div>
-        <div class="scenario-title">R&D팀 ↔ 품질보증팀 — SOP / 배치 기록 검토</div>
-      </div>
-      <div class="scenario-body">
-        <div class="scenario-q">이 상황에서 케이론을 얼마나 자주 활용하시나요?</div>
-        <div class="scenario-desc">
-          신제품 제조 SOP 작성 또는 배치 기록서(Batch Record)를 R&D와 QA가 공동으로 검토하고 승인하는 프로세스입니다.
-        </div>
-        <div class="freq-grid" data-q="sc_freq">
-          <button class="freq-btn" onclick="selectFreq(this,'sc_freq','always')">항상<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sc_freq','often')">자주<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sc_freq','sometimes')">가끔<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sc_freq','none')">사용<br>안 함</button>
-        </div>
-        <div class="sub-q">
-          <div class="sub-q-label">케이론이 이 리뷰 사이클 단축에 어느 정도 기여했나요?</div>
-          <div class="options-list" style="margin-top: 8px;">
-            <label class="option-item"><input type="radio" name="sc_cycle"> 리뷰 사이클이 눈에 띄게 단축되었다</label>
-            <label class="option-item"><input type="radio" name="sc_cycle"> 약간 빨라진 것 같다</label>
-            <label class="option-item"><input type="radio" name="sc_cycle"> 차이를 잘 모르겠다</label>
-            <label class="option-item"><input type="radio" name="sc_cycle"> 이 시나리오에서는 사용하지 않는다</label>
-          </div>
-        </div>
-      </div>
+    <!-- Q14: Pain Point -->
+    <div class="question-card">
+      <div class="q-number">Q14 — Pain Point</div>
+      <div class="q-text">리뷰와 관련해 특히 힘들었던 경험이 있다면 자유롭게 공유해 주세요.</div>
+      <div class="q-desc">구체적인 상황일수록 케이론 개선에 큰 도움이 됩니다.</div>
+      <textarea name="q14_painpoint" style="min-height:110px;" placeholder="예) 제한된 시간 안에 리뷰를 끝내야 해서 밤새 작업했습니다.
+예) 리뷰 요청이 왔는데 기본적인 오류가 너무 많아 바로 돌려보낸 적이 있습니다.
+예) 같은 데이터를 팀마다 다른 포맷으로 갖고 있어서 일일이 맞춰야 했습니다."></textarea>
     </div>
 
-    <!-- 시나리오 D: 임상팀 ↔ 안전성팀 -->
-    <div class="scenario-card">
-      <div class="scenario-header">
-        <div class="scenario-badge">시나리오 D</div>
-        <div class="scenario-title">임상팀 ↔ 안전성팀 — 안전성 보고서 (PSUR / DSUR) 검토</div>
-      </div>
-      <div class="scenario-body">
-        <div class="scenario-q">이 상황에서 케이론을 얼마나 자주 활용하시나요?</div>
-        <div class="scenario-desc">
-          PSUR, DSUR, 이상반응 보고(SAE) 등 안전성 관련 문서를 임상팀과 Pharmacovigilance팀이 함께 검토하는 상황입니다.
-        </div>
-        <div class="freq-grid" data-q="sd_freq">
-          <button class="freq-btn" onclick="selectFreq(this,'sd_freq','always')">항상<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sd_freq','often')">자주<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sd_freq','sometimes')">가끔<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'sd_freq','none')">사용<br>안 함</button>
-        </div>
-        <div class="sub-q">
-          <div class="sub-q-label">케이론이 특히 어떤 부분에서 유용했나요? (자유 기술)</div>
-          <textarea placeholder="예) 대량의 SAE 케이스를 빠르게 분류하고 요약하는 데 도움이 됩니다."></textarea>
-        </div>
-      </div>
-    </div>
+  </div><!-- /section 2 -->
 
-    <!-- 시나리오 E: 규제업무팀 ↔ 법무팀 -->
-    <div class="scenario-card">
-      <div class="scenario-header">
-        <div class="scenario-badge">시나리오 E</div>
-        <div class="scenario-title">규제업무팀 ↔ 법무팀 — 계약서 / 규제 허가 문서 검토</div>
-      </div>
-      <div class="scenario-body">
-        <div class="scenario-q">이 상황에서 케이론을 얼마나 자주 활용하시나요?</div>
-        <div class="scenario-desc">
-          CDA, 위탁 계약서, 허가 조건 서한 등 규제 및 법적 검토가 동시에 요구되는 문서를 두 팀이 공동으로 리뷰하는 상황입니다.
-        </div>
-        <div class="freq-grid" data-q="se_freq">
-          <button class="freq-btn" onclick="selectFreq(this,'se_freq','always')">항상<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'se_freq','often')">자주<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'se_freq','sometimes')">가끔<br>사용</button>
-          <button class="freq-btn" onclick="selectFreq(this,'se_freq','none')">사용<br>안 함</button>
-        </div>
-        <div class="sub-q">
-          <div class="sub-q-label">이 상황에서 케이론 활용의 가장 큰 장벽은 무엇인가요?</div>
-          <div class="options-list" style="margin-top:8px;">
-            <label class="option-item"><input type="radio" name="se_barrier"> 기밀 문서 보안에 대한 우려</label>
-            <label class="option-item"><input type="radio" name="se_barrier"> 법률 전문 용어 이해도 부족</label>
-            <label class="option-item"><input type="radio" name="se_barrier"> 팀 간 시스템 연동 미비</label>
-            <label class="option-item"><input type="radio" name="se_barrier"> 장벽 없이 잘 활용 중</label>
-            <label class="option-item"><input type="radio" name="se_barrier"> 해당 상황 없음</label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- SECTION 3: 개선 의견 및 기타 -->
+  <!-- ─── SECTION 3 ─── -->
   <div class="section">
     <div class="section-label">
       <div class="section-num">3</div>
-      <div class="section-title">개선 의견 및 기타</div>
+      <div class="section-title">케이론 사용 경험 — 개선 의견</div>
     </div>
     <div class="section-divider"></div>
 
     <!-- Q11 -->
     <div class="question-card">
-      <div class="q-number">Q11</div>
+      <div class="q-number">Q15</div>
       <div class="q-text">Cross-function 리뷰 과정에서 가장 큰 병목은 무엇인가요?</div>
       <div class="q-desc">케이론 사용 여부와 관계없이 현재 가장 불편한 지점을 선택해 주세요.</div>
       <div class="options-list">
-        <label class="option-item"><input type="radio" name="q11"> 팀 간 피드백 취합 및 버전 관리</label>
-        <label class="option-item"><input type="radio" name="q11"> 담당자 부재로 인한 승인 지연</label>
-        <label class="option-item"><input type="radio" name="q11"> 전문 용어나 규제 기준 해석 차이</label>
-        <label class="option-item"><input type="radio" name="q11"> 리뷰 히스토리 및 변경 이력 추적 어려움</label>
-        <label class="option-item"><input type="radio" name="q11"> 부서 간 우선순위 충돌</label>
-        <label class="option-item"><input type="radio" name="q11"> 기타</label>
+        <label class="option-item"><input type="radio" name="q11" value="version"> 팀 간 피드백 취합 및 버전 관리</label>
+        <label class="option-item"><input type="radio" name="q11" value="approval"> 담당자 부재로 인한 승인 지연</label>
+        <label class="option-item"><input type="radio" name="q11" value="interpretation"> 전문 용어나 규제 기준 해석 차이</label>
+        <label class="option-item"><input type="radio" name="q11" value="history"> 리뷰 히스토리 및 변경 이력 추적 어려움</label>
+        <label class="option-item"><input type="radio" name="q11" value="priority"> 부서 간 우선순위 충돌</label>
+        <label class="option-item">
+          <input type="radio" name="q11" value="other" onchange="toggleOtherRadio(this,'q11_other_wrap')"> 기타
+        </label>
+      </div>
+      <div class="other-input-wrap" id="q11_other_wrap">
+        <input type="text" name="q11_other" placeholder="어떤 병목이 있으신가요?">
       </div>
     </div>
 
     <!-- Q12 -->
     <div class="question-card">
-      <div class="q-number">Q12</div>
+      <div class="q-number">Q16</div>
       <div class="q-text">케이론에 추가되거나 개선되었으면 하는 기능이 있다면 알려주세요.</div>
-      <textarea placeholder="예) 팀별 코멘트를 한눈에 볼 수 있는 통합 대시보드, 리뷰어에게 자동으로 알림을 보내는 기능 등"></textarea>
+      <textarea name="q12" placeholder="예) 팀별 코멘트를 한눈에 볼 수 있는 통합 대시보드, 리뷰어에게 자동으로 알림을 보내는 기능 등"></textarea>
     </div>
 
     <!-- Q13 -->
     <div class="question-card">
-      <div class="q-number">Q13</div>
+      <div class="q-number">Q17</div>
       <div class="q-text">케이론의 출력 결과(요약, 검토 의견 등)를 실제 업무에 얼마나 신뢰하시나요?</div>
-      <div class="q-desc">1 = 전혀 신뢰하지 않음 / 5 = 완전히 신뢰함</div>
+      <div class="q-desc">1 = 전혀 신뢰하지 않음 &nbsp;/&nbsp; 5 = 완전히 신뢰함</div>
       <div class="scale-row" data-q="q13">
         <button class="scale-btn" onclick="selectScale(this,'q13',1)">1</button>
         <button class="scale-btn" onclick="selectScale(this,'q13',2)">2</button>
@@ -772,27 +686,34 @@
 
     <!-- Q14 -->
     <div class="question-card">
-      <div class="q-number">Q14</div>
+      <div class="q-number">Q18</div>
       <div class="q-text">케이론 도입 과정에서 팀 내 변화 관리(Change Management)는 어떠했나요?</div>
       <div class="options-list">
-        <label class="option-item"><input type="radio" name="q14"> 충분한 온보딩과 교육이 제공되었다</label>
-        <label class="option-item"><input type="radio" name="q14"> 교육은 받았으나 실무 적용에 어려움이 있었다</label>
-        <label class="option-item"><input type="radio" name="q14"> 교육이 부족했고 스스로 익혀야 했다</label>
-        <label class="option-item"><input type="radio" name="q14"> 팀 내에서 여전히 사용을 꺼리는 분위기가 있다</label>
+        <label class="option-item"><input type="radio" name="q14" value="good"> 충분한 온보딩과 교육이 제공되었다</label>
+        <label class="option-item"><input type="radio" name="q14" value="partial"> 교육은 받았으나 실무 적용에 어려움이 있었다</label>
+        <label class="option-item"><input type="radio" name="q14" value="poor"> 교육이 부족했고 스스로 익혀야 했다</label>
+        <label class="option-item"><input type="radio" name="q14" value="resistant"> 팀 내에서 여전히 사용을 꺼리는 분위기가 있다</label>
+        <label class="option-item">
+          <input type="radio" name="q14" value="other" onchange="toggleOtherRadio(this,'q14_other_wrap')"> 기타
+        </label>
+      </div>
+      <div class="other-input-wrap" id="q14_other_wrap">
+        <input type="text" name="q14_other" placeholder="상황을 간략히 알려주세요.">
       </div>
     </div>
 
     <!-- Q15 -->
     <div class="question-card">
-      <div class="q-number">Q15</div>
+      <div class="q-number">Q19</div>
       <div class="q-text">케이론에 대해 자유롭게 의견을 남겨주세요.</div>
       <div class="q-desc">칭찬, 불편한 점, 바라는 점 등 무엇이든 환영합니다.</div>
-      <textarea style="min-height: 120px;" placeholder="자유롭게 작성해 주세요."></textarea>
+      <textarea name="q15" style="min-height:120px;" placeholder="자유롭게 작성해 주세요."></textarea>
     </div>
+
   </div>
 
   <div class="submit-section">
-    <button class="submit-btn" onclick="handleSubmit()">설문 제출하기</button>
+    <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">설문 제출하기</button>
     <div class="submit-note">응답은 익명으로 처리되며, 케이론 서비스 개선에만 활용됩니다.</div>
   </div>
 
@@ -802,92 +723,161 @@
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzo2lQS_2Fxef-d9-VcOMFkLWCon7dHEWpNBTs-w12UWJDpVFutiW4LeOCngFTicy9qUQ/exec";
 
   const scaleValues = {};
-  const freqValues = {};
+  const freqValues  = {};
+  let selectedTeam  = "";
+
+  let collabTeams = [];
+  let collabCustomValue = '';
+
+  function selectMyTeam(btn, team) {
+    document.querySelectorAll('.team-btn:not(.team-multi)').forEach(b => b.classList.remove('selected'));
+    document.getElementById('q6_custom_wrap').classList.remove('visible');
+    btn.classList.add('selected');
+    selectedTeam = team;
+    document.getElementById('q6_custom_input').value = '';
+    updateProgress();
+  }
+
+  function selectMyTeamCustom(btn) {
+    document.querySelectorAll('.team-btn:not(.team-multi)').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    document.getElementById('q6_custom_wrap').classList.add('visible');
+    document.getElementById('q6_custom_input').focus();
+    selectedTeam = document.getElementById('q6_custom_input').value || '';
+    updateProgress();
+  }
+
+  function updateCustomTeam(val) {
+    selectedTeam = val;
+    updateProgress();
+  }
+
+  function toggleCollabTeam(btn, team) {
+    btn.classList.toggle('selected');
+    if (btn.classList.contains('selected')) {
+      if (!collabTeams.includes(team)) collabTeams.push(team);
+    } else {
+      collabTeams = collabTeams.filter(t => t !== team);
+    }
+    updateProgress();
+  }
+
+  function toggleCollabCustom(btn) {
+    btn.classList.toggle('selected');
+    const wrap = document.getElementById('q7_custom_wrap');
+    if (btn.classList.contains('selected')) {
+      wrap.classList.add('visible');
+      document.getElementById('q7_custom_input').focus();
+    } else {
+      wrap.classList.remove('visible');
+      collabCustomValue = '';
+      collabTeams = collabTeams.filter(t => !t.startsWith('__custom__'));
+    }
+    updateProgress();
+  }
+
+  function updateCollabCustom(val) {
+    collabCustomValue = val;
+    collabTeams = collabTeams.filter(t => !t.startsWith('__custom__'));
+    if (val.trim()) collabTeams.push('__custom__' + val);
+    updateProgress();
+  }
 
   function selectScale(btn, q, val) {
-    const row = btn.closest('.scale-row');
-    row.querySelectorAll('.scale-btn').forEach(b => b.classList.remove('selected'));
+    btn.closest('.scale-row').querySelectorAll('.scale-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
     scaleValues[q] = val;
     updateProgress();
   }
 
   function selectFreq(btn, q, val) {
-    const grid = btn.closest('[data-q]');
-    grid.querySelectorAll('.freq-btn').forEach(b => b.classList.remove('selected'));
+    btn.closest('[data-q]').querySelectorAll('.freq-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
     freqValues[q] = val;
     updateProgress();
   }
 
+  function toggleOther(checkbox, wrapId) {
+    document.getElementById(wrapId).classList.toggle('visible', checkbox.checked);
+  }
+
+  function toggleOtherRadio(radio, wrapId) {
+    document.getElementById(wrapId).classList.add('visible');
+  }
+
+  /* 라디오 변경 시 '기타' 아닌 항목 선택하면 기타 입력칸 닫기 */
+  document.querySelectorAll('input[type=radio]').forEach(r => {
+    r.addEventListener('change', function() {
+      if (this.value !== 'other') {
+        const name = this.name;
+        const otherRadio = document.querySelector(`input[type=radio][name="${name}"][value="other"]`);
+        if (otherRadio) {
+          const onchange = otherRadio.getAttribute('onchange');
+          if (onchange) {
+            const match = onchange.match(/'([^']+)'\)/);
+            if (match) document.getElementById(match[1])?.classList.remove('visible');
+          }
+        }
+      }
+      updateProgress();
+    });
+  });
+
+  document.querySelectorAll('input[type=checkbox]').forEach(c => c.addEventListener('change', updateProgress));
+
   function updateProgress() {
-    const total = 15;
+    const total = 14;
     let answered = 0;
+    if (selectedTeam) answered++;
+    if (collabTeams.length > 0) answered++;
     const radioGroups = new Set();
     document.querySelectorAll('input[type=radio]:checked').forEach(r => radioGroups.add(r.name));
     answered += radioGroups.size;
     answered += Object.keys(scaleValues).length;
-    answered += Object.keys(freqValues).length;
+    const cbGroups = new Set();
+    document.querySelectorAll('input[type=checkbox]:checked').forEach(c => cbGroups.add(c.name));
+    answered += cbGroups.size;
     const pct = Math.min(Math.round((answered / total) * 100), 100);
     document.getElementById('progressBar').style.width = pct + '%';
   }
 
-  document.querySelectorAll('input[type=radio], input[type=checkbox]').forEach(input => {
-    input.addEventListener('change', updateProgress);
-  });
-
   function collectAllAnswers() {
-    const payload = {};
+    const payload = { team: selectedTeam, collab_teams: collabTeams.map(t => t.startsWith('__custom__') ? t.replace('__custom__','') : t).join(', ') };
 
-    // 라디오 버튼
-    document.querySelectorAll('input[type=radio]:checked').forEach(r => {
-      payload[r.name] = r.value;
-    });
+    document.querySelectorAll('input[type=radio]:checked').forEach(r => { payload[r.name] = r.value; });
 
-    // 체크박스 (복수 선택 → 쉼표 구분 문자열)
     const cbGroups = {};
     document.querySelectorAll('input[type=checkbox]:checked').forEach(c => {
       if (!cbGroups[c.name]) cbGroups[c.name] = [];
       cbGroups[c.name].push(c.value);
     });
-    Object.keys(cbGroups).forEach(k => { payload[k] = cbGroups[k].join(", "); });
+    Object.keys(cbGroups).forEach(k => { payload[k] = cbGroups[k].join(', '); });
 
-    // 스케일 & 빈도 버튼
-    Object.assign(payload, scaleValues);
-    Object.assign(payload, freqValues);
+    Object.assign(payload, scaleValues, freqValues);
 
-    // 텍스트 영역 (순서대로 매핑)
-    const textareas = document.querySelectorAll('textarea');
-    payload.sa_text = textareas[0]?.value || "";
-    payload.sb_text = textareas[1]?.value || "";
-    payload.sd_text = textareas[2]?.value || "";
-    payload.q12     = textareas[3]?.value || "";
-    payload.q15     = textareas[4]?.value || "";
+    document.querySelectorAll('textarea, input[type=text]').forEach(el => {
+      if (el.name) payload[el.name] = el.value || "";
+    });
 
     return payload;
   }
 
   async function handleSubmit() {
-    const btn = document.querySelector('.submit-btn');
+    const btn = document.getElementById('submitBtn');
     btn.textContent = "제출 중...";
     btn.disabled = true;
 
     try {
-      const payload = collectAllAnswers();
-
       await fetch(SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "text/plain" },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(collectAllAnswers())
       });
-
       btn.textContent = "제출 완료 ✓";
       btn.style.background = "#0F6E56";
-      btn.style.cursor = "default";
       document.getElementById('progressBar').style.width = "100%";
       alert("소중한 응답 감사합니다!\n케이론 팀이 더 나은 서비스로 보답하겠습니다.");
-
     } catch(err) {
       btn.textContent = "설문 제출하기";
       btn.disabled = false;
